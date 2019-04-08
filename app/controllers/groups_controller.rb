@@ -35,12 +35,12 @@ class GroupsController < ApplicationController
       else
         render :edit
       end
-    end
+  end
 
     def destroy
      @group.destroy
      redirect_to groups_path, alert: "Group deleted"
-   end
+    end
 
   private
 
@@ -56,9 +56,8 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:title, :description)
   end
 
-end
+ end
 
   def group_params
     params.require(:group).permit(:title, :description)
   end
-end
